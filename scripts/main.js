@@ -1,1 +1,4 @@
-console.log('asd')
+import { renderer } from './renderer.js'
+
+renderer()
+
