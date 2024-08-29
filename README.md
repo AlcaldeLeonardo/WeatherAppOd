@@ -37,7 +37,7 @@ require('lspconfig').eslint.setup {
 Run in your terminal in the root directory of this project, the following command:
 
 ```bash
-npm npm install
+npm install
 ```
 
 And if you don't have vscode-server-languages installed, then:
