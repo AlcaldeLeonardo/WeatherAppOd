@@ -2,7 +2,7 @@
 
 ## Start Of Configurations
 
-If you use NeoVim as editor and LazyVim, you can use the following configurations:
+If you use NeoVim on LazyVim as editor , you can use the following configurations:
 
 ### To Use Standard JS
 
@@ -12,19 +12,7 @@ Prerequisites
 - LSP
 - all the eslinters and prettier may be installed by Mason.vim
 
-Run on your terminal the following command:
-
-```bash
-npm install eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise --save-dev
-```
-
-If you don't have vscode-server-languages installed globally then:
-
-```bash
-npm i -g vscode-langservers-extracted
-```
-
-And, if you want a auto-fix on save, in the init.lua file add the following:
+This project has been created using the standard JS. To use it, add the following to your init.lua file:
 
 ```lua
 require('lspconfig').eslint.setup {
@@ -46,9 +34,24 @@ require('lspconfig').eslint.setup {
 }
 ```
 
+Run in your terminal in the root directory of this project, the following command:
+
+```bash
+npm npm install
+```
+
+And if you don't have vscode-server-languages installed, then:
+(I recommend installing them globally)
+
+```bash
+npm i -g vscode-langservers-extracted
+```
+
 ## Technologies Used
 
 - Vanilla Javascript
 - HTML
 - CSS
 - Weather API by Visual Crossing
+- Eslint
+- Standard JS
