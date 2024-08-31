@@ -4,7 +4,7 @@ export function renderer () {
   const body = DomElement.body
   body.innerHTML =
     `<div class="main container">
-      <h1 class="title main__title">Wheather Forecast</h1>
+      <h1 class="title titleH1 main__title">Wheather Forecast</h1>
       <form action="#" class="form main__form">
         <div class="locationDiv">
           <input
@@ -16,9 +16,15 @@ export function renderer () {
             Get Wheather
           </button>
         </div>
-        <input type="checkbox" class="unit form__unit" />
-        <span class="slider"></span>
-        <span>°C / °F</span>
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="unit-toggle">
+            <span class="slider"></span>
+          </label>
+            <br>
+            <br>
+            <span>°C  /  °F</span>
+        </div>
       </form>
     </div>`
 }
