@@ -1,7 +1,6 @@
 import { DomElement } from './DomElements.js'
-import { formCard } from './formCard.js'
 
-export function renderer () {
-  const body = DomElement.body
-  body.appendChild(formCard())
+export function renderer (element) {
+  const { body } = DomElement
+  body.appendChild(element)
 }
