@@ -3,18 +3,19 @@
 }
 
 body {
+  padding: 1rem;
+  margin: 0;
   background-color: #e4eaf2;
   font-family: "Roboto", sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card {
-  background-color: white;
+  background-color: #f4f4f48c;
   width: 40%;
-  min-width: 450px;
+  min-width: 500px;
   margin: 0 auto;
   margin-top: 5%;
   padding: 3rem 2rem;
@@ -60,7 +61,7 @@ body {
 
   border: 1px solid #0000;
   border-radius: 0px 50px 50px 0px;
-  padding: 0.5rem;
+  padding: 0.9rem;
   min-width: 150px;
 }
 
@@ -125,4 +126,23 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
+}
+
+.infoCard {
+  padding: 1rem 0rem;
+}
+
+.infoCard__title {
+  font-size: 1.1rem;
+  margin-left: 2rem;
+}
+
+hr {
+  color: #bbb8;
+}
+
+.infoCard__todaySection {
+  display: flex;
+  background-color: chartreuse;
+  margin: 0.5rem 0rem;
 }
