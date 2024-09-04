@@ -11,7 +11,7 @@ body {
   height: 100vh;
 }
 
-.main {
+.card {
   background-color: white;
   width: 40%;
   min-width: 450px;
