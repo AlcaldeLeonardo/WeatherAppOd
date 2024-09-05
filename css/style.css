@@ -143,6 +143,47 @@ hr {
 
 .infoCard__todaySection {
   display: flex;
-  background-color: chartreuse;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+
+  gap: 1rem;
+
   margin: 0.5rem 0rem;
+}
+
+.todaySection__principalPanel {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.5rem;
+
+  grid-template-areas:
+    "icon temp"
+    "icon temp"
+    "icon feelsLike"
+    "Conditions feelsLike";
+  gap: 0.5rem;
+}
+
+.principalPanel__icon {
+  grid-area: icon;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.principalPanel__temp {
+  grid-area: temp;
+  margin: auto 0 0;
+  font-size: 3.7rem;
+}
+
+.principalPanel__feelsLike {
+  grid-area: feelsLike;
+  text-align: center;
+}
+
+.principalPanel__currentConditions {
+  grid-area: Conditions;
+  text-align: center;
 }
