@@ -14,7 +14,7 @@ export const dateFormater = (datetime, format = 'dayWeek') => {
 
   if (format === 'dayWeek') {
     const weekDayNum = date.getUTCDay()
-    const weekDays = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Sat']
+    const weekDays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat']
     const weekDay = weekDays[weekDayNum]
 
     return weekDay

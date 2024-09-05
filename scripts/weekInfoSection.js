@@ -7,11 +7,10 @@ export const weekInfoSection = (weatherData) => {
 
   weekSection$.className = 'weekInfoSection card'
   weekSection$.appendChild(titleElement('h2', 'infoCard__title weekInfoSection__title', 'Week Forecast'))
-  weekSection$.appendChild(document.createElement('hr'))
 
   for (let index = 0; index < 8; index++) {
-    weekSection$.appendChild(weekDayDiv(days[index]))
     weekSection$.appendChild(document.createElement('hr'))
+    weekSection$.appendChild(weekDayDiv(days[index]))
   }
 
   return weekSection$
@@ -23,6 +22,9 @@ const weekDayDiv = (day) => {
 
   weekDayDiv$.appendChild(dateInfoDiv(day))
   weekDayDiv$.appendChild(weekDayIcon(day))
+  weekDayDiv$.appendChild(tempInfoDiv(day))
+  weekDayDiv$.appendChild(descriptionDayDiv(day))
+  weekDayDiv$.appendChild(humidityInfo(day))
 
   console.log(day)
 
@@ -33,7 +35,7 @@ const dateInfoDiv = (day) => {
   const { datetime } = day
 
   const dateInfoDiv$ = document.createElement('div')
-  dateInfoDiv$.className = 'weekDayDiv__date date'
+  dateInfoDiv$.className = 'weekInfoSection__date date'
   const weekDay$ = document.createElement('p')
   weekDay$.className = 'weekDayDiv__day day'
   const date$ = document.createElement('p')
@@ -56,4 +58,45 @@ const weekDayIcon = (day) => {
   iconDay$.className = 'weekInfoSection__weekDayIcon weekDayIcon'
 
   return iconDay$
+}
+
+const tempInfoDiv = (day) => {
+  const { tempmax, tempmin } = day
+
+  const tempInfoDiv$ = document.createElement('div')
+  const tempMax$ = document.createElement('span')
+  const tempMin$ = document.createElement('span')
+
+  tempMax$.textContent = `${tempmax}°`
+  tempMax$.className = 'weekInfoSection__tempMax tempMax'
+  tempMin$.textContent = `${tempmin}°`
+  tempMin$.className = 'weekInfoSection__tempMin tempMin'
+
+  tempInfoDiv$.className = 'weekInfoSection__tempInfo tempInfo'
+  tempInfoDiv$.appendChild(tempMax$)
+  tempInfoDiv$.appendChild(tempMin$)
+
+  return tempInfoDiv$
+}
+
+const descriptionDayDiv = (day) => {
+  const { description } = day
+  const descriptionDiv$ = document.createElement('div')
+  const description$ = document.createElement('p')
+
+  descriptionDiv$.className = 'weekInfoSection__descriptionDiv descriptionDiv'
+  description$.className = 'descriptionDiv__text'
+  description$.textContent = description
+
+  descriptionDiv$.appendChild(description$)
+
+  return descriptionDiv$
+}
+
+const humidityInfo = (day) => {
+  const { humidity } = day
+  const humidity$ = document.createElement('p')
+  humidity$.className = 'weekInfoSection__humidity humidity'
+  humidity$.textContent = `💧 ${humidity}%`
+  return humidity$
 }

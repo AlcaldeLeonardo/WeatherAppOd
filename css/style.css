@@ -6,7 +6,7 @@ body {
   padding: 1rem;
   margin: 0;
   background-color: #e4eaf2;
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -138,7 +138,8 @@ input:checked + .slider:before {
 }
 
 hr {
-  color: #bbb8;
+  border: none;
+  border-top: 1px solid #ccca;
 }
 
 .infoCard__todaySection {
@@ -190,21 +191,65 @@ hr {
 
 .weekInfoSection {
   width: 90vw;
+  max-width: 640px;
   padding: 1rem 0;
+}
+
+.weekInfoSection__title {
+  font-weight: bold;
 }
 
 .weekInfoSection__weekDayDiv {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
   padding: 1rem;
+  gap: 1rem;
+}
+
+.weekInfoSection__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+
+  margin-left: 1rem;
+  width: 3rem;
+}
+
+.day {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: auto;
+}
+.dayNum {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: bold;
 }
 
 .weekInfoSection__weekDayIcon {
-  width: 5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.weekInfoSection__tempMax {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.weekInfoSection__tempMin {
+  color: #555;
+  font-weight: bold;
+}
+
+.weekInfoSection__descriptionDiv {
+  margin: auto;
+}
+
+.weekInfoSection__humidity {
+  margin-left: auto;
+  /* margin-right: 1rem; */
+  min-width: 4.5rem;
 }
