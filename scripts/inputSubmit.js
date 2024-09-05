@@ -2,6 +2,7 @@ import { $ } from './$.js'
 import { getWeatherData } from './getWeatherData.js'
 import { renderer } from './renderer.js'
 import { todayCard } from './todayCard.js'
+import { weekInfoSection } from './weekInfoSection.js'
 
 export const inputSubmit = () => {
   const input$ = document.createElement('input')
@@ -18,8 +19,10 @@ export const inputSubmit = () => {
       try {
         const weatherData = await getWeatherData($('#entryLocation').value)
         if ($('.infoCard') !== null) $('.infoCard').remove()
+        if ($('.weekInfoSection') !== null) $('.weekInfoSection').remove()
 
         renderer(todayCard(weatherData))
+        renderer(weekInfoSection(weatherData))
       } catch (error) {
         console.error(error)
       }

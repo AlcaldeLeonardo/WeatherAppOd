@@ -187,3 +187,24 @@ hr {
   grid-area: Conditions;
   text-align: center;
 }
+
+.weekInfoSection {
+  width: 90vw;
+  padding: 1rem 0;
+}
+
+.weekInfoSection__weekDayDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.weekInfoSection__weekDayIcon {
+  width: 5rem;
+}
