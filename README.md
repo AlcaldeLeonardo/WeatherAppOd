@@ -1,5 +1,7 @@
 # WeatherAppOd
 
+This is a weather forecast web application project proposed by Odin Project
+
 ## Start Of Configurations
 
 If you use NeoVim on LazyVim as editor , you can use the following configurations:
