@@ -2,6 +2,7 @@ import { $ } from './$.js'
 import { getWeatherData } from './getWeatherData.js'
 import { renderer } from './renderer.js'
 import { todayCard } from './todayCard.js'
+import { unitFlag } from './unitFlag.js'
 import { weekInfoSection } from './weekInfoSection.js'
 
 export const inputSubmit = () => {
@@ -20,6 +21,9 @@ export const inputSubmit = () => {
         const weatherData = await getWeatherData($('#entryLocation').value)
         if ($('.infoCard') !== null) $('.infoCard').remove()
         if ($('.weekInfoSection') !== null) $('.weekInfoSection').remove()
+
+        document.querySelector("input[type='checkbox']").checked = false
+        unitFlag.isCelsius = false
 
         renderer(todayCard(weatherData))
         renderer(weekInfoSection(weatherData))

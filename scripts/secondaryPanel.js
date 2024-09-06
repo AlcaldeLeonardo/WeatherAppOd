@@ -1,14 +1,19 @@
+import { getCardinalDirection } from './getCardinalDirection.js'
+
 export const secondaryPanel = (currentConditions) => {
+  const { humidity, windspeed, winddir } = currentConditions
+
   const secondaryPanel$ = document.createElement('div')
+  const humidity$ = document.createElement('p')
+  const wind$ = document.createElement('p')
+
   secondaryPanel$.className = 'secondaryPanel todaySection__secondaryPanel'
 
-  const humidity = document.createElement('p')
-  humidity.textContent = `Humidity: ${currentConditions.humidity}%`
-  secondaryPanel$.appendChild(humidity)
+  humidity$.textContent = `Humidity: ${humidity}%`
+  secondaryPanel$.appendChild(humidity$)
 
-  const wind = document.createElement('p')
-  wind.textContent = `Wind: ${parseFloat((currentConditions.windspeed) * 1.609).toFixed(1)} kph`
-  secondaryPanel$.appendChild(wind)
+  wind$.textContent = `WindSpeed: ${getCardinalDirection(winddir)} ${parseFloat((windspeed) * 1.609).toFixed(1)} kph `
+  secondaryPanel$.appendChild(wind$)
 
   return secondaryPanel$
 }

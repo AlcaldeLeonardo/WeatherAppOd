@@ -67,9 +67,9 @@ const tempInfoDiv = (day) => {
   const tempMax$ = document.createElement('span')
   const tempMin$ = document.createElement('span')
 
-  tempMax$.textContent = `${tempmax}°`
+  tempMax$.innerHTML = `<span class="temp__unit">${tempmax}</span>°`
   tempMax$.className = 'weekInfoSection__tempMax tempMax'
-  tempMin$.textContent = `${tempmin}°`
+  tempMin$.innerHTML = `<span class="temp__unit">${tempmin}</span>°`
   tempMin$.className = 'weekInfoSection__tempMin tempMin'
 
   tempInfoDiv$.className = 'weekInfoSection__tempInfo tempInfo'

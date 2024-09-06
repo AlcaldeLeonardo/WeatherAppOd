@@ -11,11 +11,11 @@ export const principalPanel = (currentConditions) => {
   icon.className = 'principalPanel__icon'
   principalPanel$.appendChild(icon)
 
-  temp.textContent = `${currentConditions.temp}°`
+  temp.innerHTML = `<span class = "temp__unit" >${currentConditions.temp}</span>°`
   temp.className = 'principalPanel__temp'
   principalPanel$.appendChild(temp)
 
-  feelsLike.textContent = `Feels like: ${currentConditions.feelslike}°`
+  feelsLike.innerHTML = `Feels like: <span class = "temp__unit" >${currentConditions.feelslike}</span>°`
   feelsLike.className = 'principalPanel__feelsLike'
   principalPanel$.appendChild(feelsLike)
 
