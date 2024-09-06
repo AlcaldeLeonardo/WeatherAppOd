@@ -7,7 +7,7 @@ export const principalPanel = (currentConditions) => {
 
   principalPanel$.className = 'principalPanel todaySection__principalPanel'
 
-  icon.src = `../img/icons/${currentConditions.icon}.svg`
+  icon.src = `/img/icons/${currentConditions.icon}.svg`
   icon.className = 'principalPanel__icon'
   principalPanel$.appendChild(icon)
 

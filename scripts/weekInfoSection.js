@@ -54,7 +54,7 @@ const weekDayIcon = (day) => {
   const { icon } = day
   const iconDay$ = document.createElement('img')
 
-  iconDay$.src = `../img/icons/${icon}.svg`
+  iconDay$.src = `/img/icons/${icon}.svg`
   iconDay$.className = 'weekInfoSection__weekDayIcon weekDayIcon'
 
   return iconDay$
