@@ -12,7 +12,6 @@ export const checkbox = () => {
     const tempUnit$$ = $$('.temp__unit')
     let convertedTemp
     tempUnit$$.forEach(tempUnit$ => {
-      console.log(tempUnit$.textContent)
       if (unitFlag.isCelsius) {
         convertedTemp = converterCtoF(Number(tempUnit$.textContent)).toFixed(1)
       } else {
@@ -21,7 +20,6 @@ export const checkbox = () => {
       tempUnit$.textContent = convertedTemp
     })
     unitFlag.isCelsius = !unitFlag.isCelsius
-    console.log(unitFlag.isCelsius)
   })
 
   return checkbox$

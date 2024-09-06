@@ -4,7 +4,6 @@ import { getWeatherData } from './getWeatherData.js'
 import { parallaxFX } from './parallaxFx.js'
 
 const weatherData = await getWeatherData('chilecito')
-console.log(weatherData)
 
 renderer(formCard())
 parallaxFX()

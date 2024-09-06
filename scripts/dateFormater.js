@@ -1,6 +1,5 @@
 export const dateFormater = (datetime, format = 'dayWeek') => {
   const date = new Date(datetime)
-  console.log(date)
 
   if (format === 'MM-DD') {
     const month = date.getUTCMonth() + 1

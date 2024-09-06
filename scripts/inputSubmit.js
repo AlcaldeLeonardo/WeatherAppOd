@@ -28,7 +28,6 @@ export const inputSubmit = () => {
         renderer(todayCard(weatherData))
         renderer(weekInfoSection(weatherData))
       } catch (error) {
-        console.error(error)
       }
     }
   })

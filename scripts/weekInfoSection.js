@@ -26,8 +26,6 @@ const weekDayDiv = (day) => {
   weekDayDiv$.appendChild(descriptionDayDiv(day))
   weekDayDiv$.appendChild(humidityInfo(day))
 
-  console.log(day)
-
   return weekDayDiv$
 }
 
