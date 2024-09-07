@@ -22,14 +22,14 @@ require('lspconfig').eslint.setup {
     validate = "on",
     codeAction = {
       enable = true,
-      mode = "all", -- Habilita todas las acciones de corrección
+      mode = "all",
     },
   },
-  on_attach = function(client, bufnr) -- Para realizar los fix al guardar
+  on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
       callback = function()
-        vim.cmd("EslintFixAll")-- Comando de neoVim (:EslintFixAll)
+        vim.cmd("EslintFixAll")
       end,
     })
   end,
