@@ -14,7 +14,8 @@ Prerequisites
 - LSP
 - all the eslinters and prettier may be installed by Mason.vim
 
-This project has been created using the standard JS. To use it, add the following to your init.lua file:
+This project has been created using the standard JS. To use it, add the following
+to your init.lua file:
 
 ```lua
 require('lspconfig').eslint.setup {
@@ -57,3 +58,4 @@ npm i -g vscode-langservers-extracted
 - Weather API by Visual Crossing
 - Eslint
 - Standard JS
+- Webpack 5
