@@ -7,9 +7,13 @@ export const principalPanel = (currentConditions) => {
 
   principalPanel$.className = 'principalPanel todaySection__principalPanel'
 
-  icon.src = `./img/icons/${currentConditions.icon}.svg`
-  icon.className = 'principalPanel__icon'
-  principalPanel$.appendChild(icon)
+  import(`../img/icons/${currentConditions.icon}.svg`)
+    .then((module) => {
+      icon.src = module.default
+      icon.className = 'principalPanel__icon'
+      principalPanel$.appendChild(icon)
+    })
+    .catch((error) => console.log(error))
 
   temp.innerHTML = `<span class = "temp__unit" >${currentConditions.temp}</span>°`
   temp.className = 'principalPanel__temp'
