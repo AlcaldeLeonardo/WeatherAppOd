@@ -1,7 +1,7 @@
 export function getCardinalDirection (degrees) {
   const directions = [
-    'N', 'NNW', 'NW', 'WNW', 'W', 'WSW', 'SW', 'SSW',
-    'S', 'SSE', 'SE', 'ESE', 'E', 'ENE', 'NE', 'NNE'
+    'N', 'NNE', 'NE', 'ENE', 'W', 'ESE', 'SE', 'SSE',
+    'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'
   ]
 
   // Each direction covers 22.5 degrees
