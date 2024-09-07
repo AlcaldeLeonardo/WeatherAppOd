@@ -1,3 +1,4 @@
+const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
@@ -28,5 +29,11 @@ module.exports = {
       template: "./src/index.html",
       favicon: "./src/img/weatherAppIcon.png",
     }),
+    new ESLintWebpackPlugin({
+      extensions: ["js"],
+      fix: true,
+      failOnError: true,
+      overrideConfigFile: path.resolve(__dirname, ".eslintrc.json"),
+    })
   ],
 };
